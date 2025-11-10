@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felices 7 meses, Mi Changuita ❤️</title>
+    <link rel="stylesheet" href="7meses.css">
+</head>
+<body>
+    
+    <div class="hearts-container">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    
+    <audio id="bg-music" loop>
+        <source src="Miranda! perfecta (letra del Coro).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <h1>Felices 7 meses, Mi Changuita <span class="main-heart">❤️</span></h1>
+        <h2>Cada día a tu lado, el más especial.</h2>
+
+        <p>
+            Hace 7 meses, empezamos este increíble viaje juntos y he aprendido mucho de ti desde entonces.  
+            Haces mi vida más fácil, especial, cada día más brillante y feliz.  
+            Estoy tan agradecido de conocerte y tenerte, con tu sonrisa, personalidad y chinos hermosos, cada cosa que te hace ser tu *Mi Borreguita*. 💕  
+        </p>
+
+        <p>
+            — Por más recuerdos, mas risas, más amor y una vida juntos.  
+            Te amo 💞
+        </p>
+
+        <div class="photos">
+            
+            <img src="photo2.jpg" alt="Nuestros hijos"> 
+            <img src="photo3.jpg" alt="Última foto juntos">
+            <img src="photo1.jpg" alt="Donde todo empezó">
+        </div>
+
+        <footer>
+            Con amor ❤️ [Miguelito] para [Marianita] | 💖
+        </footer>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const audio = document.getElementById('bg-music');
+            
+            audio.volume = 0;
+            const fadeIn = () => {
+                let vol = 0;
+                const interval = setInterval(() => {
+                    if (vol < 1) {
+                        vol += 0.02;
+                        audio.volume = vol;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 200);
+            };
+            audio.play().then(fadeIn).catch(() => {
+                
+                const btn = document.createElement('button');
+                btn.textContent = "▶ Play Music";
+                btn.classList.add('play-button');
+                document.body.appendChild(btn);
+                btn.addEventListener('click', () => {
+                    audio.play();
+                    fadeIn();
+                    btn.remove();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

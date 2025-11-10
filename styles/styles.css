@@ -11,6 +11,18 @@ h1{
     color: darkblue;
 }
 
+main img{
+    width: 150px;
+    height: auto;
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+}
+
+p{
+    padding: 0;
+}
+
 img {
     width: 150px;
     height: auto;
@@ -38,15 +50,6 @@ aside{
 aside img{
     width: 200px;
     height: auto;
-}
-
-main img{
-    width: 150px;
-    height: auto;
-}
-
-p{
-    padding: 0;
 }
 
 footer{

@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root{
     --text-align: center;
     --height: auto;
@@ -23,6 +29,8 @@ main img{
     border: 1px solid steelblue;
     padding: 2px;
     box-shadow: 0 0 30px gray;
+    float: right;
+    margin: 0 0 1rem 1rem;
 }
 
 p{
@@ -52,14 +60,30 @@ aside{
     padding: 1rem;
     background-color: whitesmoke;
     text-align: var(--text-align);
+    position: relative;
 }
 aside img{
     width: 200px;
     height: var(--height);
 }
 
+aside h2{
+    position: absolute;
+    top: 20px;
+    left: 70px;
+}
+
 footer{
     margin-top: 10px;
     border-top: var(--border);
     text-align: var(--text-align);
+}
+
+/* class selectors */
+.box{
+    margin: 1rem;
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 1rem;
+    background-color: #eee;
+    color: #000
 }

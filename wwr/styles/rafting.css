@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #00e5fe; 
+  --primary-color: darkblue; 
   --secondary-color: #ffffff;
   --accent1-color: #264653;
   --accent2-color: #e9c46a;
@@ -59,7 +59,7 @@ nav, p, section, article {
   color: #fff;
 }
 
-article {
+.hero article {
   position: absolute;
   top:100px;
   right: 0px;
@@ -74,7 +74,7 @@ article {
 .hero article img {
   float: right;
   width: 130px;
-  border: var(--accent1-color);
-  margin: var(--accent2-color);
-  box-shadow: var(--secondary-color);
+  border: 0px;
+  margin: 0px;
+  box-shadow: 0px;
 }

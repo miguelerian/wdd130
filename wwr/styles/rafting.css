@@ -1,21 +1,20 @@
-/* ========== ROOT VARIABLES (unchanged) ========== */
+/* ================= ROOT VARIABLES ================= */
 :root {
     --primary-color: darkblue;
     --secondary-color: black;
     --accent1-color: #264653;
     --accent2-color: #610558;
-    --heading-font: "Times New Roman", "Georgia", serif;
+    --heading-font: "Times New Roman", Georgia, serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* Reset — unchanged */
+/* ================= GLOBAL RESET ================= */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Page wrapper — unchanged */
 body {
     font-family: var(--body-font);
     color: var(--secondary-color);
@@ -27,110 +26,88 @@ header, main, footer {
     margin: 0 auto;
 }
 
-/* Typography — unchanged */
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
+/* ================= HEADER ================= */
+header {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+    background: #cbb6f4;
+    padding: 1.5rem 2rem;
 }
 
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
+header img {
+    width: 120px;
 }
 
-/* Social Media anchor reset */
-.socialmedia a {
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 2rem;
+}
+
+header nav a {
     text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    background: white;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
 }
 
-/* ========== HERO REQUIREMENTS FIXED HERE ========== */
-/* hero must be position relative */
+header nav a:hover {
+    background: #ece5ff;
+}
+
+/* ================= HERO SECTION ================= */
 .hero {
     position: relative;
-    padding: 2rem;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-/* hero img MUST be full width background image */
-.hero > img {
+.hero img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* hero h1 MUST be absolutely positioned over the image */
 .hero h1 {
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 16px;
-    text-align: center;
-    background-color: var(--accent1-color);
-    opacity: 0.7;
+    padding: 1rem;
+    background-color: rgba(38, 70, 83, 0.75);
     color: white;
+    font-family: var(--heading-font);
 }
 
-/* hero article MUST be absolute and overlay the image */
 .hero article {
     position: absolute;
-    top: 120px;
-    right: 20px;
-    width: 25%;
-    padding: 15px;
-    background-color: var(--accent2-color);
-    opacity: 0.7;
+    top: 150px;
+    right: 40px;
+    width: 280px;
+    padding: 1rem;
+    background: rgba(97, 5, 88, 0.85);
     color: white;
+    border-radius: 8px;
 }
 
-/* article image MUST float right */
 .hero article img {
-    float: right;
     width: 130px;
+    float: right;
     margin-left: 8px;
-    border: 0;
     box-shadow: 4px 4px rgba(0,0,0,0.3);
 }
 
-/* ========== HEADER GRID + FLEX (your code kept) ========== */
-header{
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    align-items: center;
-    background: #cbb6f4;
-    padding: 1rem;
-}
-
-header img{
-    width: 120px;
-}
-
-header nav ul{
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 1.5rem;
-}
-
-header nav a{
-    text-decoration: none;
-    padding: 0.4rem 1rem;
-    background: white;
-    border-radius: 6px;
-    color: black;
-}
-
-header nav a:hover{
-    background: #ece5ff;
-}
-
-/* ========== HISTORY GRID (kept exactly) ========== */
-.history{
+/* ================= HISTORY SECTION ================= */
+.history {
     padding: 2rem;
     background: #f5f5f5;
     text-align: center;
 }
 
-.history-grid{
+.history-grid {
     margin-top: 1.5rem;
     display: grid;
     grid-template-columns: 1fr 250px 1fr;
@@ -138,51 +115,56 @@ header nav a:hover{
     align-items: center;
 }
 
-.history-grid img{
+.history-grid img {
     width: 100%;
     border-radius: 8px;
 }
 
-/* ========== ADVENTURES SECTION (unchanged) ========== */
-.adventures{
+/* ================= ADVENTURES ================= */
+.adventures {
     padding: 1rem;
     text-align: center;
 }
 
-.adventure-gallery{
+.adventure-gallery {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1.2rem;
+    margin-top: 1rem;
 }
 
-.adventure-gallery figure{
+.adventure-gallery figure {
     width: 18%;
 }
 
-.adventure-gallery img{
+.adventure-gallery img {
     width: 100%;
     border-radius: 6px;
 }
 
-figcaption{
-    margin-top: .5rem;
-    font-size: .8rem;
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
 }
 
-/* ========== FOOTER FIXES (kept your layout) ========== */
-footer{
+/* ================= FOOTER ================= */
+footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #cbb6f4;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 
-footer .socialmedia{
+footer .socialmedia {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
-footer .socialmedia img{
-    width: 40px;
+footer .socialmedia img {
+    width: 35px;
+}
+
+footer a {
+    text-decoration: none;
 }

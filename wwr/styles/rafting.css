@@ -33,6 +33,7 @@ header {
     align-items: center;
     background: var(--primary-color);
     padding: 1.5rem 2rem;
+    color: white; /* Text inside header now readable */
 }
 
 header img {
@@ -46,14 +47,15 @@ header nav ul {
     gap: 2rem;
 }
 
+/* WCAG-compliant nav links */
 header nav a {
     text-decoration: none;
     padding: 0.5rem 1.2rem;
-    background: white;
     border-radius: 8px;
-    color: var(--secondary-color);
-    font-weight: bold;
+    color: white;
     border: 2px solid var(--accent1-color);
+    background: transparent;
+    font-weight: bold;
 }
 
 header nav a:hover {
@@ -84,6 +86,7 @@ header nav a:hover {
     font-family: var(--heading-font);
 }
 
+/* Hero article using accent2 color */
 .hero article {
     position: absolute;
     top: 150px;
@@ -169,5 +172,5 @@ footer .socialmedia img {
 
 footer a {
     text-decoration: none;
-    color: white;
+    color: white; /* needed for contrast */
 }

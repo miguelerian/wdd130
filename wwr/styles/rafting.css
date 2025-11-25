@@ -142,7 +142,7 @@ header nav a:hover{
 .history-grid{
   margin-top: 1.5rem;
   display: grid;
-  grid-template-columns: 1 fr 250px 1fr;
+  grid-template-columns: 1fr 250px 1fr;
   gap: 1.5rem;
   align-items: center;
 }

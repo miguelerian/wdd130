@@ -175,3 +175,84 @@ footer a {
     text-decoration: none;
     color: white; /* needed for contrast */
 }
+
+/* ================= CONTACT PAGE ================= */
+
+.contact-info {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.contact-layout {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Map */
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0; /* OK because you removed inline border */
+    border-radius: 8px;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 120px;
+}
+
+.contact-form fieldset {
+    border: 1px solid #888;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.contact-form button {
+    background: var(--accent1-color);
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.contact-form button:hover {
+    background: var(--accent2-color);
+}
+
+/* Employees */
+.employees {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.employee-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+}
+
+.employee-grid figure {
+    width: 28%;
+}
+
+.employee-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
